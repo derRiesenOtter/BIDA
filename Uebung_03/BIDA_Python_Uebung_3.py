@@ -47,7 +47,6 @@ test_größtergemeinsamerTeiler()
 #Aufgabe 5
 
 def Fakultät(a):
-    Fakultät
     Faku = 1
     for i in range (1, a+1):
         Faku = Faku * i
