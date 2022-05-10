@@ -1,4 +1,5 @@
 
+from numpy import kaiser
 from termcolor import cprint
 
 cprint("Sag mir was Nettes",'green')
@@ -7,4 +8,4 @@ cprint("Vielen Dank für Deine Eingabe, die da war:",'green')
 cprint(was_nettes,'cyan')
 
 #ALternativ
-#print("blablabla:" +input())
+cprint("blablabla:" +input(),'cyan')
