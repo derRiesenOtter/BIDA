@@ -4,6 +4,8 @@ print ("und zwar in dieser Zeile")
 
 #Aufgabe 2
 print ("name\tvorname\talter\twohnort")
+#Alternativ
+print ("name" ,"vorname","alter","wohnort", sep="\t")
 
 #Aufgabe 3
 #siehe extra Datei mit Endung lese_eingabe
