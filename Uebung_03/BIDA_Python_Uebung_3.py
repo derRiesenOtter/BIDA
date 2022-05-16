@@ -67,4 +67,5 @@ def test_Fakultät():
 
 test_Fakultät()
 
+
 #Aufgabe 6-8 in Datei plots
