@@ -25,12 +25,12 @@ print_named_arguments(a="monkey",b="ape")
 #Aufgabe 1c)
 
 def print_some_named_arguments(**kwargs):
-    for key, value in kwargs.items():
-        print("{0} = {1}".format(key, value)) # was passiert hier?
+    for key, value in kwargs.items(): #kwargs ist diction.
+        print("{0} = {1}".format(key, value)) 
 
 print_some_named_arguments(name="Mooooonkey", surname="Ape")        
 
-#Aufgabe 1d)
+#Aufgabe 1d) eig. b)
 
 def print_named_arguments_standardvalue(a, b, reverse=False):
     if not reverse: 
@@ -159,8 +159,8 @@ print(final_list)
 
 #Aufgabe 6d)
 
-print(list(map(lambda x: x*x,range(-10,10+1))))
-print(list(map(lambda x: x*x*x,range(-10,10+1))))
+print(list(map(lambda x: x**2,range(-10,10+1))))
+print(list(map(lambda x: x**3,range(-10,10+1))))
 
 #Aufgabe 6e)
 
@@ -177,7 +177,7 @@ me = {"name": "Robin", "surname": "Ender", "age": "23", "cleans_laptop_in_dishwa
 
 #Aufgabe 7b)
 
-report_named_args_mod(me=me)
+report_named_args(**me)
 
 #Aufgabe 7c)
 sonic = {"name":"sonic", "surname": "the hedgehog", "age": "hmm","sport": "running"}
