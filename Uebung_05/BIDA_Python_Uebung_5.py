@@ -1,7 +1,7 @@
 x = range(-10,11)
 
 def my_map(f,x):
-    y=[]
+    y=[] # könnte auch mit y = [0] *10
     for i in range(len(x)):
         y.append(0)
         y[i] = f(x[i]) 
