@@ -14,5 +14,5 @@ get_name = lambda x: x.get("name")
 
 me = {"name": "Robin", "surname": "Ender", "age": "23", "cleans_laptop_in_dishwasher": True, "get_name": lambda x: x.get("name")}
 
-print(me.get("get_name"))
+print(me.get("get_name")(me)) # [] geht auch, dann braucht man kein .get
 
