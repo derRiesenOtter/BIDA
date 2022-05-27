@@ -1,6 +1,6 @@
 x = range(-10,11)
 
-def my_map_recursive(F,x):
+def my_map_recursive(F,x): # wie kann ich mir hier diesen blöden teil sparen?
     i=0
     z=[]
     recursive_part(F,x,i,z)
