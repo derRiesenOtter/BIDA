@@ -10,6 +10,7 @@ Algen_pandas = Algen.to_pandas()
 sns.set_theme(style="whitegrid")
 
 #Algen_pandas = pd.read_csv("Algen.csv") # bekomme so was anderes...
+
 print (Algen_pandas)
 sns.stripplot(x = Algen_pandas["Endocytobiose"],y=Algen_pandas["Anzahl (Hüll)-Membranen"], hue = Algen_pandas["Monophyletische Algen-Gruppe"], dodge =  True)
 kokolores = ["blue","orange","green","red","purple","brown","pink","gray","yellow","cyan"]
