@@ -17,3 +17,4 @@ def recursive_part(F,x,i,z):
 
 my_map_recursive(lambda x: x**2, x)
 my_map_recursive(lambda x: x**3, x)
+
