@@ -14,11 +14,11 @@ class NeedlemanWunschDnaAligner(Aligner):
         
 
 
-s1 = Aligner("ABC","DEF")
-s2 = Aligner("ABC","DEF")
-seq1= "ABC"
-seq2 = "DEF"
-s1.pairwise_align(seq1,seq2)
+#s1 = Aligner("ABC","DEF")
+#s2 = Aligner("ABC","DEF")
+#seq1= "ABC"
+#seq2 = "DEF"
+#s1.pairwise_align(seq1,seq2)
 
 
 
