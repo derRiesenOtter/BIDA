@@ -1,4 +1,3 @@
-from distutils.log import error
 import numpy as np
 
 class Aligner:
