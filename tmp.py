@@ -24,7 +24,18 @@ def NeedlemanWunsch(seq1,seq2,gapcost):
     alignedseq1 = ""
     alignedseq2 = ""
     while i != 0 and j != 0:
-        maximum = max((scorematrix[i-1][j-1]),(scorematrix[i][j-1]),(scorematrix[i-1][j]))
+        match_mismatch_backtrack = - 1000
+        if (scorematrix[i-1][j-1])+gapcost[0] == (scorematrix[i][j]):
+            match_mismatch_backtrack = (scorematrix[i-1][j-1])
+        elif (scorematrix[i-1][j-1])+gapcost[1] == (scorematrix[i][j]):
+            match_mismatch_backtrack = (scorematrix[i-1][j-1])
+        gap_horizontal_backtrack = - 1000
+        if(scorematrix[i-1][j])+gapcost[2] == (scorematrix[i][j]):
+            gap_horizontal_backtrack = (scorematrix[i-1][j])
+        gap_vertical_backtrack = - 1000
+        if(scorematrix[i][j-1])+gapcost[2] == (scorematrix[i][j]):
+            gap_vertical_backtrack = (scorematrix[i][j-1])
+        maximum = max((match_mismatch_backtrack),(gap_horizontal_backtrack),(gap_vertical_backtrack))
         print(maximum)
         if (scorematrix[i-1][j-1]) == maximum:
             alignedseq1 = seq1[i-1] + alignedseq1
@@ -44,4 +55,3 @@ def NeedlemanWunsch(seq1,seq2,gapcost):
     print(alignedseq2)
 
 NeedlemanWunsch(seq1,seq2,gapcost)
-
