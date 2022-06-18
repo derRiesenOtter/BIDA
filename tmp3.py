@@ -50,7 +50,7 @@ def NeedlemanWunsch(seq1,seq2,gapcost):
             i=i-1
     print(scorematrix)
     print(alignedseq1,alignedseq2, sep = "\n")
-    alignedsequences = (alignedseq1,alignedseq2)
+    alignedsequences = [alignedseq1,alignedseq2]
     return alignedsequences
     
 

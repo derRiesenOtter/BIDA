@@ -1,3 +1,4 @@
+from distutils.log import error
 import numpy as np
 
 class Aligner:
@@ -11,33 +12,33 @@ class Aligner:
             seq1,"and",seq2) 
 
 class NeedlemanWunschDnaAligner(Aligner):
-    def pairwise_align(self,seq1,seq2,gapcost):
+    def pairwise_align(self,seq1,seq2):
         scorematrixzeilen = len(seq1)+1
         scorematrixspalten = len(seq2)+1
         scorematrix = np.zeros([scorematrixzeilen,scorematrixspalten])
         for i in range(1,scorematrixzeilen):
-           scorematrix[i][0] = scorematrix[i-1][0] + gapcost[2]
+           scorematrix[i][0] = scorematrix[i-1][0] + self.gap_cost[2]
         for j in range(1,scorematrixspalten):
-           scorematrix[0][j] = scorematrix[0][j-1] + gapcost[2]
+           scorematrix[0][j] = scorematrix[0][j-1] + self.gap_cost[2]
         for i in range(1,scorematrixzeilen):
             for j in range(1,scorematrixspalten):
                 match_mismatch = 0
                 if seq1[i-1] == seq2[j-1]:
-                    match_mismatch = gapcost[0]
+                    match_mismatch = self.gap_cost[0]
                 else:
-                    match_mismatch = gapcost[1]
-                scorematrix[i][j] = max((scorematrix[i-1][j-1]+match_mismatch),(scorematrix[i][j-1]+gapcost[2]),(scorematrix[i-1][j]+gapcost[2]))
+                    match_mismatch = self.gap_cost[1]
+                scorematrix[i][j] = max((scorematrix[i-1][j-1]+match_mismatch),(scorematrix[i][j-1]+ self.gap_cost[2]),(scorematrix[i-1][j]+ self.gap_cost[2]))
         alignedseq1 = ""
         alignedseq2 = ""
         while i != 0 and j != 0:
             backtrack = []
-            if (scorematrix[i-1][j-1])+gapcost[0] == (scorematrix[i][j]):
+            if (scorematrix[i-1][j-1])+ self.gap_cost[0] == (scorematrix[i][j]):
                 backtrack.append(scorematrix[i-1][j-1])
-            elif (scorematrix[i-1][j-1])+gapcost[1] == (scorematrix[i][j]):
+            elif (scorematrix[i-1][j-1])+ self.gap_cost[1] == (scorematrix[i][j]):
                 backtrack.append(scorematrix[i-1][j-1])
-            if(scorematrix[i-1][j])+gapcost[2] == (scorematrix[i][j]):
+            if(scorematrix[i-1][j])+ self.gap_cost[2] == (scorematrix[i][j]):
                 backtrack.append(scorematrix[i-1][j])
-            if(scorematrix[i][j-1])+gapcost[2] == (scorematrix[i][j]):
+            if(scorematrix[i][j-1])+ self.gap_cost[2] == (scorematrix[i][j]):
                 backtrack.append(scorematrix[i][j-1])
             maximum = max(backtrack)
             print(maximum)
@@ -59,27 +60,26 @@ class NeedlemanWunschDnaAligner(Aligner):
         alignedsequences = (alignedseq1,alignedseq2)
         return alignedsequences        
         
+seq1 = "AGCGATTCTTG"
+seq2 = "TGCCACCTG"
 
+gap_cost = [1,-1,-2]
 
-#s1 = Aligner("ABC","DEF")
-#s2 = Aligner("ABC","DEF")
-#seq1= "ABC"
-#seq2 = "DEF"
-#s1.pairwise_align(seq1,seq2)
+align = NeedlemanWunschDnaAligner(0,gap_cost)
+align.pairwise_align(seq1,seq2)
 
-
-
-
-#def NeedlemanWunsch(u,v,δ):
-    #S[0][0] = 0
-    #for i in range(1,len(u)+2):
-       # S[i][0] = S[i−1][0] #+ δ(ui , −)
-    #for j in range(1,len(v)+2):
-    #    S[0][j] = S[0][j−1] #+ δ(−, vj )
-   # for i in range(1,len(u)+2):
-   #     for j in range(1,len(v)+2):
-    #        S[i][j] = max()
-
-# Kostenfaktor noch implementieren
-
-#Print(max(7,5,9))
+def test_pairwise_align():
+    #if not "pairwise_align" in globals():
+        #print("The function 'pairwise_align' that is to be tested has not been defined yet.")
+        #return
+    test = NeedlemanWunschDnaAligner(0,[1,-1,-2])
+    expected_result = ("AGCGATTCTTG","TGCCAC_CT_G")
+    actual_result = test.pairwise_align("AGCGATTCTTG","TGCCACCTG")
+    if expected_result == actual_result:
+        print("Funktion aligniert Sequenzen korrekt")
+    else:
+        print("Funktioniert nicht. Erwartetes Ergebnis:",expected_result,"Erhaltenes Ergebnis:",actual_result)
+    testi = Aligner
+    testi.pairwise_align(0,"AGCGATTCTTG","TGCCACCTG")
+    
+test_pairwise_align()
