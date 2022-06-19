@@ -45,3 +45,4 @@ def NeedlemanWunsch(seq1,seq2,gapcost):
 
 NeedlemanWunsch(seq1,seq2,gapcost)
 
+s
