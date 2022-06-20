@@ -129,6 +129,9 @@ dmypy.json
 .pyre/
 
 # exports
-.png
-.pdf
-.csv
+*.png
+*.pdf
+*.csv
+
+# others
+*.DS_Store
