@@ -131,7 +131,7 @@ dmypy.json
 # exports
 *.png
 *.pdf
-*.csv
+
 
 # others
 *.DS_Store
