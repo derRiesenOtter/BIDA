@@ -1,0 +1,11 @@
+Monophyletische Algen-Gruppe;Kürzel;Endocytobiose;Anzahl (Hüll)-Membranen;Chlorophyll a;Chlorophyll b;Chlorophyll c;Nucleomorph;Phycobilisomen;gelöste Phycobiline;nuclear_SSU_rRNA_Sequence_Link;plastid_SSU_rRNA_Sequence_Link
+Cyanobakterien - Blaualgen;Cya;0;1;1;0;0;0;1;0;n.a.;https://www.ebi.ac.uk/ena/browser/api/fasta/JABBYQ010000031.1:4081..5562:rRNA.1?lineLimit=1000
+Glaucophyta;Gla;1;2;1;0;0;0;1;0;https://www.ebi.ac.uk/ena/browser/api/fasta/ICRL01000007.1:612..2418:rRNA.1?lineLimit=1000;https://www.ebi.ac.uk/ena/browser/api/fasta/MG601102.1:48692..50199:rRNA.1?lineLimit=1000
+Stramenopiles;Str;2;4;1;0;1;0;0;0;https://www.ebi.ac.uk/ena/browser/api/fasta/KX431455.1:1..1067:rRNA.1?lineLimit=1000;https://www.ebi.ac.uk/ena/browser/api/fasta/VLTL01000396.1:367..2393:rRNA.1?lineLimit=1000
+Cryptophyceae;Cry;2;4;1;0;1;1;0;1;https://www.ebi.ac.uk/ena/browser/api/fasta/X57162.1:1..1773:rRNA.1?lineLimit=1000;https://www.ebi.ac.uk/ena/browser/api/fasta/KT428890.1:117521..119010:rRNA.1?lineLimit=1000
+Euglenida;Eug;2;3;1;1;0;0;0;0;https://www.ebi.ac.uk/ena/browser/api/fasta/AF081592.1:1..2105:rRNA.1?lineLimit=1000;https://www.ebi.ac.uk/ena/browser/api/fasta/JN674636.2:1..1424:rRNA.2?lineLimit=1000
+Haptophyta;Hap;2;4;1;0;1;0;0;0;https://www.ebi.ac.uk/ena/browser/api/fasta/MT760788.1:1..1737:rRNA.1?lineLimit=1000;https://www.ebi.ac.uk/ena/browser/api/fasta/MT471325.1:3589..6470:rRNA.1?lineLimit=1000
+Rhodophyta;Rho;1;2;1;0;0;0;1;0;https://www.ebi.ac.uk/ena/browser/api/fasta/Z14140.1:1..1778:rRNA.1?lineLimit=1000;https://www.ebi.ac.uk/ena/browser/api/fasta/Z29521.1:135..1625:rRNA.1?lineLimit=1000
+Viridiplantae;Vir;1;2;1;1;0;0;0;0;https://www.ebi.ac.uk/ena/browser/api/fasta/CACVBZ020000051.1:2564..4371:rRNA.1?lineLimit=1000;https://www.ebi.ac.uk/ena/browser/api/fasta/LR761918.1:149891..151358:rRNA.1?lineLimit=1000
+Dinophyceae;Din;3;3;1;0;1;0;0;0;https://www.ebi.ac.uk/ena/browser/api/fasta/AF022195.1:1..1803:rRNA.1?lineLimit=1000;https://www.ebi.ac.uk/ena/browser/api/fasta/AB027236.1:1..1304:rRNA.1?lineLimit=1000
+Chlorarachniophyceae;Chl;2;4;1;1;0;1;0;0;https://www.ebi.ac.uk/ena/browser/api/fasta/CP006628.1:201141..203047:rRNA.1?lineLimit=1000;https://www.ebi.ac.uk/ena/browser/api/fasta/KF438023.1:38659..40101:rRNA.1?lineLimit=1000
