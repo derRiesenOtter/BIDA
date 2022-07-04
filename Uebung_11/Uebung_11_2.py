@@ -1,8 +1,17 @@
+import seaborn as sns
 import matplotlib.pyplot as plt
-import math
+import datatable as dt
 
-Taxa = range(3,12+1) 
+Tiere = dt.fread("Tiere.csv")
+Tiere_pandas = Tiere.to_pandas()
+sns.set_theme(style="whitegrid")
 
-plt.plot(Taxa,list(map(lambda x: math.factorial(((2*x)-5))/((2**(x-3))*math.factorial(x-3)) ,Taxa)),'r',Taxa,list(map(lambda x: math.factorial(((2*x)-3))/((2**(x-2))*math.factorial(x-2)) ,Taxa)),'b') 
-plt.savefig("no_rooted_and_unrooted_trees.pdf",format ="pdf")
+sns.stripplot(x = (Tiere_pandas["Gewicht"]),y=Tiere_pandas["Herzschlag"], hue = Tiere_pandas["Spezies"])
+for i in range(15):
+    plt.text(s = Tiere_pandas["Spezies"][i], x = (Tiere_pandas["Gewicht"][i]), y = (Tiere_pandas["Herzschlag"][i]))
+plt.xlabel("Gewicht in g")
+plt.ylabel("Herzfrequenz in min^-1")
+plt.savefig("Tiere Plot")
 plt.show()
+
+#+0.1*i-0.5     [i]+0.02
